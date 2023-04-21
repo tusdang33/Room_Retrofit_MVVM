@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:background="@color/black"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/discountContainer"
+        android:layout_width="55dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="15sp"
+        android:layout_marginRight="15sp"
+        android:background="#861010"
+        app:layout_constraintEnd_toEndOf="@id/image"
+        app:layout_constraintTop_toTopOf="@id/image" />
+
+    <TextView
+        android:id="@+id/discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-25%"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/discountContainer"
+        app:layout_constraintEnd_toEndOf="@id/discountContainer"
+        app:layout_constraintStart_toStartOf="@id/discountContainer"
+        app:layout_constraintTop_toTopOf="@id/discountContainer" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guildLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="3D Embellishment Art Lamp"
+        app:layout_constraintEnd_toEndOf="@id/guildLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$39.00"
+        android:textColor="#861010"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image" />
+
+    <TextView
+        android:id="@+id/priceFake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$39.00"
+        android:textColor="#7d7d7d"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/price" />
+
+    <TextView
+        android:id="@+id/rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="3.60"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <ImageView
+        android:id="@+id/star"
+        android:layout_width="15sp"
+        android:layout_height="15sp"
+        android:background="@drawable/ic_baseline_star_24"
+        android:backgroundTint="#ffea00"
+        app:layout_constraintBottom_toBottomOf="@id/rating"
+        app:layout_constraintStart_toEndOf="@id/rating"
+        app:layout_constraintTop_toTopOf="@id/rating" />
+
+    <ImageButton
+        android:id="@+id/addCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_baseline_add_shopping_cart_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guildLine"
+        app:layout_constraintTop_toBottomOf="@id/priceFake" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
